@@ -1,5 +1,6 @@
 package com.espcommander.commander;
 
+import com.espcommander.commander.utils.CalibrationTool;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -68,7 +69,6 @@ public class Main extends Application
     private static ImageView pointer ;
     private static VBox infoBox;
     private static Group baseStack;
-    private static HBox inputBox;
     private static VBox consoleBox;
     static private String[] tileColorList = new String[]{"gray","red","brown","piss","purple","blue"};
     private static String[] pinRow_1 = new String[]{"GND","GPIO 23","GPIO 22","TX","RX","GPIO 21","GND","GPIO 19","GPIO 18","GPIO 5","GPIO 17","GPIO 16","GPIO 4","GPIO 0","GPIO 2","GPIO 15","D1","D0","CLK"};
@@ -105,7 +105,7 @@ public class Main extends Application
 
         stage.setMinHeight(stage.getHeight());
         stage.setMinWidth(stage.getWidth());
-
+        CalibrationTool.spawn();
 
     }
     void locatePress(MouseEvent mouseEvent)
